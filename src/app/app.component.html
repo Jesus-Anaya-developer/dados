@@ -1,8 +1,9 @@
 <div class="jumbotron text-center">
-  <button class="btn btn-success btn-lg">
+  <button class="btn btn-success btn-lg" (click)="tirarDados()">
     Tirar dados
   </button>
   <br>
-  <img class="img" src="../assets/img/dice1.png" alt="Primer dado">
-  <img class="img" src="../assets/img/dice6.png" alt="Segundo dado">
+  <img class="img" [src]="dadoIzquierda" alt="Primer dado">
+  <img class="img" [src]="dadoDerecha" alt="Segundo dado">
+  <h1 *ngIf="numero1 === numero2"><span class="badge rounded-pill text-bg-success">Ganaste</span></h1>
 </div>
